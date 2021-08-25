@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lawrence910426.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="ICPC 很正式的一場比賽，有很多大企業贊助，有很多面試過我的教授出現，有很多熟悉的競賽老人面孔出現，能夠再次見到他們真開心 &gt;&lt; 比較神奇的是，比賽中不能打翻水，會被 Disqualification，我懷疑之前有人不小心打翻水到電腦上（笑）  有趣的題目 定義一個「好」的數字為「沒有重複出現的字元」，123465789123465789123465789 是一個好的數字，2222">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ICPC_2020">
+<meta property="og:url" content="https://lawrence910426.github.io/2020/11/14/ICPC-2020/index.html">
+<meta property="og:site_name" content="毒瘤工程師">
+<meta property="og:description" content="ICPC 很正式的一場比賽，有很多大企業贊助，有很多面試過我的教授出現，有很多熟悉的競賽老人面孔出現，能夠再次見到他們真開心 &gt;&lt; 比較神奇的是，比賽中不能打翻水，會被 Disqualification，我懷疑之前有人不小心打翻水到電腦上（笑）  有趣的題目 定義一個「好」的數字為「沒有重複出現的字元」，123465789123465789123465789 是一個好的數字，2222">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-11-14T14:47:54.000Z">
+<meta property="article:modified_time" content="2021-08-25T11:16:47.871Z">
+<meta property="article:author" content="吳邦寧">
+<meta property="article:tag" content="Algorithm">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://lawrence910426.github.io/2020/11/14/ICPC-2020/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://lawrence910426.github.io/2020/11/14/ICPC-2020/","path":"2020/11/14/ICPC-2020/","title":"ICPC_2020"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>ICPC_2020 | 毒瘤工程師</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">毒瘤工程師</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">lawrence910426</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#icpc"><span class="nav-number">1.</span> <span class="nav-text"> ICPC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%89%E8%B6%A3%E7%9A%84%E9%A1%8C%E7%9B%AE"><span class="nav-number">2.</span> <span class="nav-text"> 有趣的題目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AE%98%E5%BF%B5"><span class="nav-number">3.</span> <span class="nav-text"> 殘念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%8C%E8%A8%98"><span class="nav-number">4.</span> <span class="nav-text"> 後記</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">吳邦寧</p>
+  <div class="site-description" itemprop="description">雜筆、演算法、CTF、金融經濟</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">標籤</span>
+      </div>
+  </nav>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://lawrence910426.github.io/2020/11/14/ICPC-2020/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="吳邦寧">
+      <meta itemprop="description" content="雜筆、演算法、CTF、金融經濟">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="毒瘤工程師">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ICPC_2020
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2020-11-14 22:47:54" itemprop="dateCreated datePublished" datetime="2020-11-14T22:47:54+08:00">2020-11-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新於</span>
+        <time title="修改時間：2021-08-25 19:16:47" itemprop="dateModified" datetime="2021-08-25T19:16:47+08:00">2021-08-25</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="icpc"><a class="markdownIt-Anchor" href="#icpc"></a> ICPC</h1>
+<p>很正式的一場比賽，有很多大企業贊助，有很多面試過我的教授出現，有很多熟悉的競賽老人面孔出現，能夠再次見到他們真開心 &gt;&lt;</p>
+<p>比較神奇的是，比賽中不能打翻水，會被 Disqualification，我懷疑之前有人不小心打翻水到電腦上（笑）</p>
+<h1 id="有趣的題目"><a class="markdownIt-Anchor" href="#有趣的題目"></a> 有趣的題目</h1>
+<p>定義一個「好」的數字為「沒有重複出現的字元」，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>123465789</mn></mrow><annotation encoding="application/x-tex">123465789</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">3</span><span class="mord">4</span><span class="mord">6</span><span class="mord">5</span><span class="mord">7</span><span class="mord">8</span><span class="mord">9</span></span></span></span> 是一個好的數字，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>22</mn></mrow><annotation encoding="application/x-tex">22</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">2</span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>353</mn></mrow><annotation encoding="application/x-tex">353</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">5</span><span class="mord">3</span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>12341</mn></mrow><annotation encoding="application/x-tex">12341</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">2</span><span class="mord">3</span><span class="mord">4</span><span class="mord">1</span></span></span></span> 不是好的數字。<br />
+有以下兩種詢問</p>
+<ol>
+<li>在區間 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mrow><mi>l</mi><mo separator="true">,</mo><mi>r</mi></mrow><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[{l, r}]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span><span class="mclose">]</span></span></span></span> 內，有幾個「好」的數字？</li>
+<li>問你第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 個好的數字是多少？</li>
+</ol>
+<p>這題的作法跟 Apcs 階梯數字有點像，垃圾如我，賽中完全沒有想法，賽後才寫出來，題解在<a href="https://lawrence910426.github.io/2020/11/25/BachelorNumber/">這裡</a>。</p>
+<h1 id="殘念"><a class="markdownIt-Anchor" href="#殘念"></a> 殘念</h1>
+<ul>
+<li>對不起，翰文葛格，我沒有好好的把 BCC 模板砸出來</li>
+<li>對不起，雅筠老大，第一天我跑去錄影了（幹）</li>
+<li>對不起，我不該烏鴉嘴，我當時講說「如果我們銀牌，我就跳成功湖」，結果就差一名銀牌了。</li>
+</ul>
+<h1 id="後記"><a class="markdownIt-Anchor" href="#後記"></a> 後記</h1>
+<p>未來應該還會繼續參加這種比賽，滿有趣的，跟隊友一起奮戰的感覺很棒！<br />
+祝明年能夠拿到銀牌，如果明年銀牌的話我考慮跳湖（X）</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/05/Rolling-Hash/" rel="prev" title="Rolling Hash 的奇淫技巧">
+                  <i class="fa fa-chevron-left"></i> Rolling Hash 的奇淫技巧
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/11/25/BachelorNumber/" rel="next" title="BachelorNumber">
+                  BachelorNumber <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">吳邦寧</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha256-55Ddc47WvWTK5vYVejnAuSK7USJaL7FQXrzQ4HiQ1WY=" crossorigin="anonymous">
+
+
+
+</body>
+</html>
